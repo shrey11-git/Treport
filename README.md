@@ -1,9 +1,6 @@
 # Treport (Trend based Report Generator)
 A Python-powered data analysis and PDF report generator for UPI transaction trends in India.
 
-# ※ What Problem Does It Solve?
-Startups or small businesses often lack the tools or budget for deep market analytics. Treport bridges that gap by giving you clear, visual insights from UPI transaction data — highlighting usage trends, seasonal spikes, and app-wise dominance. The insights help businesses make smarter decisions, like when to market, where to partner, and how to forecast future demand.
-
 # ※ How It Came to Life
 Many early-stage companies can’t afford full-blown data teams or paid reports. Treport was built with them in mind.
 
