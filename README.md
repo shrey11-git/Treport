@@ -4,14 +4,14 @@ A Python-powered data analysis and PDF report generator for UPI transaction tren
 # ※ What Problem Does It Solve?
 Startups or small businesses often lack the tools or budget for deep market analytics. Treport bridges that gap by giving you clear, visual insights from UPI transaction data — highlighting usage trends, seasonal spikes, and app-wise dominance. The insights help businesses make smarter decisions, like when to market, where to partner, and how to forecast future demand.
 
-#※ How It Came to Life
+# ※ How It Came to Life
 Many early-stage companies can’t afford full-blown data teams or paid reports. Treport was built with them in mind.
 
 This tool shows that the majority of transactions happen in the last 3–4 months of the year, driven by festivals, holidays, and sales seasons. Most of these are made through the top 5% of UPI apps.
 
 A smart strategy? Partner with these top apps during peak months and offer your product or service as discount vouchers. It’s a win-win — customers get deals, and your brand reaches new audiences during high-traffic seasons.
 
-#※ Key Features
+# ※ Key Features
 - CSV Import: Load your own UPI dataset.
 - Preprocessing: Cleans and prepares the data.
 - Exploratory Analysis:
@@ -25,14 +25,14 @@ Auto-generates a multi-page PDF with all charts and captions.
 - Business Insight:
 Ready-to-use charts and trends for pitch decks, investor briefs, or campaign planning.
 
-#※ Tech Stack
+# ※ Tech Stack
 - Language: Python 3.9+
 - Data Handling: pandas, numpy
 - Visualization: matplotlib, seaborn
 - ML & Forecasting: scikit-learn, statsmodels (ARIMA)
 - Reporting: fpdf
 
-#※ How to Run
+# ※ How to Run
 -Clone the repo
 git clone https://github.com/your-username/treport.git
 cd treport
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 python main.py
 You’ll be prompted to input the path to your CSV file (e.g., data/upi_2024.csv). The PDF report will be saved under reports/Digital_Payments_Report.pdf.
 
-#※ Charts (Generated using Treport)
+# ※ Charts (Generated using Treport)
 - App Usage Frequency (bar chart)
 <img width="1800" height="800" alt="app_usage_frequency" src="https://github.com/user-attachments/assets/2152b892-8e99-4871-a0b3-0ab23cbd89ba" />
 
@@ -62,13 +62,13 @@ You’ll be prompted to input the path to your CSV file (e.g., data/upi_2024.csv
 <img width="1000" height="600" alt="forecast_trend" src="https://github.com/user-attachments/assets/c6ff7646-d11f-416a-9134-62bcfba26e63" />
 
 
-#※ What I Learned
+# ※ What I Learned
 - Real-world data cleaning and preprocessing
 - Combining traditional analytics with ML forecasting
 - Automating visual storytelling with FPDF
 - Packaging insights in a way that’s useful, visual, and actionable for decision-makers
 
-#※ Author
+# ※ Author
 Shreyash Tiwari
 [ GitHub](https://github.com/shrey11-git) • [linkedin](http://www.linkedin.com/in/shreyashtiwari-csbs)
 
