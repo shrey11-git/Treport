@@ -33,14 +33,14 @@ Ready-to-use charts and trends for pitch decks, investor briefs, or campaign pla
 - Reporting: fpdf
 
 # ※ How to Run
--Clone the repo
+- Clone the repo
 git clone https://github.com/your-username/treport.git
 cd treport
--Install dependencies (recommended in a virtual environment)
+- Install dependencies (recommended in a virtual environment)
 pip install -r requirements.txt
--Run the app
+- Run the app
 python main.py
-You’ll be prompted to input the path to your CSV file (e.g., data/upi_2024.csv). The PDF report will be saved under reports/Digital_Payments_Report.pdf.
+You’ll be prompted to input the path to your CSV file. The PDF report will be saved under reports/Digital_Payments_Report.pdf.
 
 # ※ Charts (Generated using Treport)
 - App Usage Frequency (bar chart)
@@ -72,5 +72,5 @@ You’ll be prompted to input the path to your CSV file (e.g., data/upi_2024.csv
 Shreyash Tiwari
 [ GitHub](https://github.com/shrey11-git) • [linkedin](http://www.linkedin.com/in/shreyashtiwari-csbs)
 
-TL;DR Summary
+TL;DR Summary:
 Treport helps early-stage companies analyze digital payment trends using Python. It turns raw UPI data into visual insights and a downloadable PDF — perfect for business planning, partnership strategy, and marketing timing.
