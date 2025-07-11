@@ -73,5 +73,4 @@ Shreyash Tiwari
 [ GitHub](https://github.com/shrey11-git) • [linkedin](http://www.linkedin.com/in/shreyashtiwari-csbs)
 
 TL;DR Summary:
-
 Treport helps early-stage companies analyze digital payment trends using Python. It turns raw UPI data into visual insights and a downloadable PDF — perfect for business planning, partnership strategy, and marketing timing.
