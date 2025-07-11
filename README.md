@@ -1,4 +1,4 @@
-# Treport (Trend based Report Generator)
+# Treport (Digital Transactions Trend Analyser)
 A Python-powered data analysis and PDF report generator for UPI transaction trends in India.
 
 # ※ What Problem Does It Solve?
