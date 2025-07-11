@@ -6,7 +6,7 @@ Many early-stage companies can’t afford full-blown data teams or paid reports.
 
 This tool shows that the majority of transactions happen in the last 3–4 months of the year, driven by festivals, holidays, and sales seasons. Most of these are made through the top 5% of UPI apps.
 
-A smart strategy? Partner with these top apps during peak months and offer your product or service as discount vouchers. It’s a win-win — customers get deals, and your brand reaches new audiences during high-traffic seasons.
+A smart strategy? Partner with these top apps during peak months and offer your product or service as discount vouchers. It’s a win-win - customers get deals, and your brand reaches new audiences during high-traffic seasons.
 
 # ※ Key Features
 - CSV Import: Load your own UPI dataset.
@@ -70,4 +70,4 @@ Shreyash Tiwari
 [ GitHub](https://github.com/shrey11-git) • [linkedin](http://www.linkedin.com/in/shreyashtiwari-csbs)
 
 TL;DR Summary:
-Treport helps early-stage companies analyze digital payment trends using Python. It turns raw UPI data into visual insights and a downloadable PDF — perfect for business planning, partnership strategy, and marketing timing.
+Treport helps early-stage companies analyze digital payment trends using Python. It turns raw UPI data into visual insights and a downloadable PDF - perfect for business planning, partnership strategy, and marketing timing.
