@@ -12,11 +12,11 @@ A smart strategy? Partner with these top apps during peak months and offer your 
 - CSV Import: Load your own UPI dataset.
 - Preprocessing: Cleans and prepares the data.
 - Exploratory Analysis:
-App usage frequency
-Monthly transaction values
-Top 5 apps (pie chart)
-Feature importance using Linear Regression
-Time-based trend line and ARIMA forecast
+App usage frequency, 
+Monthly transaction values, 
+Top 5 apps (pie chart), 
+Feature importance using Linear Regression, 
+Time-based trend line and ARIMA forecast, 
 - PDF Report:
 Auto-generates a multi-page PDF with all charts and captions.
 - Business Insight:
