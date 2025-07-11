@@ -19,18 +19,19 @@ class PDF(FPDF):
 
 def create_pdf_report(image_paths, output_pdf='reports/Digital_Payments_Report.pdf'):
     pdf = PDF()
-    pdf.set_auto_page_break(auto=False)  # Turn off auto-break for manual control
+    pdf.set_auto_page_break(auto=False)
     pdf.add_page()
 
-    count = 0  # Track number of charts per page
+    count = 0
 
     for title, path in image_paths.items():
         if count == 2:
-            pdf.add_page()  # Add new page after every 2 plots
+            # Add page after 2 plots
+            pdf.add_page()
             count = 0
 
         pdf.add_section_title(title)
         pdf.add_image(path)
-        count += 1  # Increment plot count on current page
+        count += 1
 
     pdf.output(output_pdf)

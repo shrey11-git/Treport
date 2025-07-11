@@ -1,14 +1,12 @@
-# main.py
-
 from eda import load_data, preprocess, analyze
 
 def main():
-    print("Welcome to TrendPy! 📊")
+    print("Welcome to TrendPy!")
     csv_path = input("Enter path to your UPI dataset CSV file: ").strip('"')
 
     try:
         df = load_data(csv_path)
-        print(f"📄 Columns in dataset: {df.columns.tolist()}")
+        print(f"Columns in dataset: {df.columns.tolist()}")
 
         df = preprocess(df)
         analyze(df)
@@ -24,11 +22,11 @@ def main():
         }
 
         create_pdf_report(image_paths)
-        print("📝 PDF Report saved to 'reports/Digital_Payments_Report.pdf'")
+        print("PDF Report saved to 'reports/Digital_Payments_Report.pdf'")
 
-        print("✅ Analysis complete! Check 'reports/visuals/' for charts.")
+        print("Analysis complete! Check 'reports/visuals/' for charts.")
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
     main()

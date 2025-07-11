@@ -1,5 +1,3 @@
-# eda.py
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -15,7 +13,7 @@ def load_data(csv_path):
     return df
 
 def preprocess(df):
-    # ✅ Map Period (numeric month) to month names
+    # Map Period- numeric to month names
     month_map = {
         1: 'January', 2: 'February', 3: 'March', 4: 'April',
         5: 'May', 6: 'June', 7: 'July', 8: 'August',
@@ -32,10 +30,10 @@ def preprocess(df):
 def analyze(df, output_dir='reports/visuals'):
     os.makedirs(output_dir, exist_ok=True)
 
-    plt.rcParams.update({'font.size': 12})  # Adjust value as needed (12–14 is usually optimal)
+    plt.rcParams.update({'font.size': 12})
 
-    # ✅ Bar Chart - App Usage Frequency (Improved readability)
-    plt.figure(figsize=(18, 8))  # Increased figure size
+    # Bar Chart - App Usage Frequency
+    plt.figure(figsize=(18, 8))
     app_counts = df['PaymentApps'].value_counts()
 
     app_counts.plot(kind='bar', color='#56AB91')
@@ -43,20 +41,20 @@ def analyze(df, output_dir='reports/visuals'):
     plt.xlabel('Payment Apps')
     plt.ylabel('Count')
 
-    # 🧹 Clean and adjust x-axis labels
+    # Clean and adjust x-axis labels
     plt.xticks(
         ticks=range(len(app_counts)),
         labels=app_counts.index,
-        rotation=60,  # Tilt more
-        ha='right',  # Align right
-        fontsize=8  # Slightly smaller font
+        rotation=60,
+        ha='right',
+        fontsize=8
     )
 
     plt.tight_layout()
     plt.savefig(f"{output_dir}/app_usage_frequency.png")
     plt.close()
 
-    # ✅ Monthly Transaction Value (Total)
+    # Monthly Transaction Value (Total)
     month_wise = df.groupby('Month')[['TotalTxValue (Cr)']].sum().sort_values('TotalTxValue (Cr)', ascending=False)
     plt.figure(figsize=(18,8))
     sns.barplot(x=month_wise.index, y=month_wise['TotalTxValue (Cr)'], color='#78c6a3')
@@ -68,10 +66,9 @@ def analyze(df, output_dir='reports/visuals'):
     plt.savefig(f"{output_dir}/monthly_transaction_value.png")
     plt.close()
 
-    # ✅ Pie Chart - Top 5 Apps by Total Value
+    # Pie Chart - Top 5 Apps by Total Value
     top_apps = df.groupby('PaymentApps')[['TotalTxValue (Cr)']].sum().sort_values('TotalTxValue (Cr)', ascending=False).head(5)
     plt.figure(figsize=(6,4.5))
-    # plt.pie(top_apps['TotalTxValue (Cr)'], labels=top_apps.index, autopct='%.1f%%', colors=sns.color_palette('pastel'))
     teal_shades = ['#469d89', '#56ab91', '#67b99a', '#78c6a3', '#88d4ab']
     plt.pie(top_apps['TotalTxValue (Cr)'], labels=top_apps.index, autopct='%.1f%%', colors=teal_shades)
 
@@ -80,9 +77,9 @@ def analyze(df, output_dir='reports/visuals'):
     plt.savefig(f"{output_dir}/top_5_apps_pie.png")
     plt.close()
 
-    # 🔥 New Visual - Transaction Trend Over Time
+    # New Visual - Transaction Trend Over Time
     transaction_trend_over_time(df, output_dir)
-    feature_importance(df, output_dir)  # <--- this was missing
+    feature_importance(df, output_dir)
     forecast_transaction_trend(df, output_dir)
 
 def transaction_trend_over_time(df, output_dir):
@@ -120,7 +117,7 @@ def feature_importance(df, output_dir='reports/visuals'):
 
     importances = pd.Series(model.coef_, index=X.columns).sort_values(ascending=True)
 
-    # Plotting
+    # Plot
     plt.figure(figsize=(8,5))
     importances.plot(kind='barh', color='#469d89')
     plt.title("Feature Importance: What drives Total Transaction Value?")
@@ -132,9 +129,9 @@ def feature_importance(df, output_dir='reports/visuals'):
 
 
 def forecast_transaction_trend(df, output_dir):
-    warnings.filterwarnings("ignore")  # suppress convergence warnings
+    warnings.filterwarnings("ignore")
 
-    # Prepare monthly time series
+    # monthly time series
     month_order = [
         'January', 'February', 'March', 'April', 'May', 'June',
         'July', 'August', 'September', 'October', 'November', 'December'
@@ -143,11 +140,11 @@ def forecast_transaction_trend(df, output_dir):
     ts = df.groupby('Month', observed=False)['TotalTxValue (Cr)'].sum()
     ts = ts.sort_index()
 
-    # Fit ARIMA (order can be optimized later)
+    # Fit ARIMA
     model = ARIMA(ts, order=(1, 1, 1))
     model_fit = model.fit()
-
-    forecast = model_fit.forecast(steps=3)  # Predict next 3 months
+    # Prediction of next 3 months
+    forecast = model_fit.forecast(steps=3)
 
     # Plot actual + forecast
     plt.figure(figsize=(10, 6))
