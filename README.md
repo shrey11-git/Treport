@@ -61,7 +61,6 @@ You’ll be prompted to input the path to your CSV file. The PDF report will be 
 - Forecast for Next 3 Months
 <img width="1000" height="600" alt="forecast_trend" src="https://github.com/user-attachments/assets/c6ff7646-d11f-416a-9134-62bcfba26e63" />
 
-
 # ※ What I Learned
 - Real-world data cleaning and preprocessing
 - Combining traditional analytics with ML forecasting
