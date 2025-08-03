@@ -7,7 +7,7 @@ A Python-based data analysis and reporting solution that transforms UPI transact
 # ※ How It Came to Life
 Many early-stage companies can’t afford full-blown data teams or paid reports. Treport was built with them in mind.
 
-This tool shows that the majority of transactions happen in the last 3–4 months of the year, driven by festivals, holidays, and sales seasons. Most of these are made through the top 5% of UPI apps.
+This tool shows that the majority of transactions happen in the last 3-4 months of the year, driven by festivals, holidays, and sales seasons. Most of these are made through the top 5% of UPI apps.
 
 A smart strategy? Partner with these top apps during peak months and offer your product or service as discount vouchers. It’s a win-win - customers get deals, and your brand reaches new audiences during high-traffic seasons.
 
